@@ -11,9 +11,9 @@
 | encrypted_password | string | null: false |
 | qualification_id | integer | null: false |
 <!-- 資格を持っているか -->
-| gender | string | null: false|
+| gender_id | integer | null: false|
 <!-- 男女でできる仕事が違う可能性があるため -->
-| self-introduction | text | -------- |
+| self_introduction | text | -------- |
 - has_many :works
 - belongs_to :childcare_user
 
