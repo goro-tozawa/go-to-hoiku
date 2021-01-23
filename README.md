@@ -32,8 +32,7 @@
 | representative_phone_number | string | null: false|
 | times_id | integer | null: false |
 | encrypted_password | string | null: false |
-| self-introduction | text | -------- |
-| user | references | null: false |
+| self_introduction | text | -------- |
 - has_many :works
 - has_many :childcare_user
 
