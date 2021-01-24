@@ -32,17 +32,23 @@
 | representative_phone_number | string | null: false|
 | times_id | integer | null: false |
 | encrypted_password | string | null: false |
-| self-introduction | text | -------- |
-| user | references | null: false |
+| self_introduction | text | -------- |
 - has_many :works
 - has_many :childcare_user
 
 ## works
+<!-- 検索機能を追加実装したらいいかも？ -->
 | Column | Type | Options |
 | ---------- | -------- | -------- |
+| area_id | integer | null: false |
+| facility_name| integer | null: false |
 | works_id| integer | null: false |
 | times_id | integer | null: false |
 | childcare_user | references | null: false |
 
 - belongs_to :user
 - belongs_to :childcare_user
+
+## contact_us
+<!-- 問い合わせ -->
+
