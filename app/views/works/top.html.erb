@@ -10,9 +10,38 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
+  <%# <header>
     <h1>Picture ook Search</h1>
-  </header>
+  </header> %>
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= image_tag("go-to-hoiku_rogo.png", class: :logo) %>
+          </div>
+          <%# ログインしているときは以下を表示するようにしましょう %>
+          <% if user_signed_in?  %>
+            <%# if user_signed_in? を追加 %>
+              <div class="nav__right">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete,  class: :nav__logout %>
+                <%# root_pathをに変更 %>
+                <%= link_to "New Proto", new_prototype_path, class: :nav__btn %> 
+                <%# root_pathをnew_prototype_pathに変更%>
+              </div> 
+            <% else %> 
+              <%# elseを追加 %>
+              <div class="nav__right">
+                <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+                <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+              </div>
+            <%# // ログインしているときは上記を表示するようにしましょう %>
+            <%# ログインしていないときは以下を表示するようにしましょう %>
+          <% end %>
+           <%# if user_signed_in?に対するendを追加 %>
+            <%# // ログインしていないときは上記を表示するようにしましょう %>
+        </div>
+      </div>
+    </header>
 
   <main>
     <!-- ul.contents>li.animationTarget*4>img[src="img/img$.jpg"]+.contentsText>h2{Dummy Title}+p{ここに文章が入ります} -->
