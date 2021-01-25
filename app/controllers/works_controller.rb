@@ -1,6 +1,5 @@
 class WorksController < ApplicationController
-  def top
-  end
   def index
+    @user = User.new
   end
 end
