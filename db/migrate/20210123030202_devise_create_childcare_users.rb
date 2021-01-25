@@ -4,8 +4,19 @@ class DeviseCreateChildcareUsers < ActiveRecord::Migration[6.0]
   def change
     create_table :childcare_users do |t|
       ## Database authenticatable
+      t.string :facility_name,              null: false
+      t.string :facility_name_kana,              null: false
+      t.integer :business_form,              null: false
+      t.string :facility_address,              null: false
+      t.string :facility_phone_number,              null: false
+      t.string :representative,              null: false
+      t.string :representative_phone_number,              null: false
+      t.integer :times_id,              null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
+      t.integer :calendar_id,              null: false
+      t.text :self_introduction
+
 
       ## Recoverable
       t.string   :reset_password_token
