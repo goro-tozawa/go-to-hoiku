@@ -36,7 +36,7 @@
 | calendar_id | integer | null: false|
 | self_introduction | text | -------- |
 - has_many :works
-- has_many :childcare_user
+- has_many :user
 
 ## works
 <!-- 検索機能を追加実装したらいいかも？ -->
