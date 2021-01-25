@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_24_015620) do
+ActiveRecord::Schema.define(version: 2021_01_25_052000) do
 
   create_table "childcare_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_01_24_015620) do
     t.string "representative_phone_number"
     t.integer "times_id"
     t.text "self_introduction"
+    t.integer "calendar"
     t.index ["email"], name: "index_childcare_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_childcare_users_on_reset_password_token", unique: true
   end
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_01_24_015620) do
     t.integer "qualification_id"
     t.integer "gender_id"
     t.text "self_introduction"
+    t.integer "calendar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
