@@ -10,47 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_25_052000) do
+ActiveRecord::Schema.define(version: 2021_01_24_015620) do
 
   create_table "childcare_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "facility_name", null: false
+    t.string "facility_name_kana", null: false
+    t.integer "business_form", null: false
+    t.string "facility_address", null: false
+    t.string "facility_phone_number", null: false
+    t.string "representative", null: false
+    t.string "representative_phone_number", null: false
+    t.integer "times_id", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.integer "calendar_id", null: false
+    t.text "self_introduction"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "facility_name"
-    t.string "facility_name_kana"
-    t.integer "business_form"
-    t.string "facility_address"
-    t.string "facility_phone_number"
-    t.string "representative"
-    t.string "representative_phone_number"
-    t.integer "times_id"
-    t.text "self_introduction"
-    t.integer "calendar"
     t.index ["email"], name: "index_childcare_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_childcare_users_on_reset_password_token", unique: true
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "name_kana", null: false
+    t.date "birthday", null: false
+    t.string "nick_name", null: false
+    t.string "postal_code", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.integer "qualification_id", null: false
+    t.integer "gender_id", null: false
+    t.text "self_introduction"
+    t.integer "calendar_id", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
-    t.string "name_kana"
-    t.date "dirthday"
-    t.string "nickname"
-    t.string "postal_code"
-    t.integer "qualification_id"
-    t.integer "gender_id"
-    t.text "self_introduction"
-    t.integer "calendar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
