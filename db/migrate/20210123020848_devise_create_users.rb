@@ -14,7 +14,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.integer :qualification_id, null: false
       t.integer :gender_id, null: false
       t.text :self_introduction
-      t.integer :calendar_id, null: false
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at

@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2021_01_24_015620) do
     t.integer "times_id", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.integer "calendar_id", null: false
     t.text "self_introduction"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -32,6 +31,15 @@ ActiveRecord::Schema.define(version: 2021_01_24_015620) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_childcare_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_childcare_users_on_reset_password_token", unique: true
+  end
+
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -45,7 +53,6 @@ ActiveRecord::Schema.define(version: 2021_01_24_015620) do
     t.integer "qualification_id", null: false
     t.integer "gender_id", null: false
     t.text "self_introduction"
-    t.integer "calendar_id", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
