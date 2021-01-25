@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+ 
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Picture ook Search</h1>
+  </header>
+
+  <main>
+    <!-- ul.contents>li.animationTarget*4>img[src="img/img$.jpg"]+.contentsText>h2{Dummy Title}+p{ここに文章が入ります} -->
+    <ul class="contents">
+      <li class="animationTarget">
+        <%# <img src="/images/img1.jpg" alt="">  %>
+          <%= image_tag("img8.jpg", class: :photo) %>
+        <div class="contentsText">
+          <h2>Dummy Title</h2>
+          <p>
+            ここに文章が入ります。 ここに文章が入ります。 ここに文章が入ります。<br>
+            ここに文章が入ります。 ここに文章が入ります。
+          </p>
+        </div>
+      </li>
+
+      <li class="animationTarget">
+         <%= image_tag("img7.jpg", class: :photo) %>
+        <div class="contentsText">
+          <h2>Dummy Title</h2>
+          <p>
+            ここに文章が入ります。 ここに文章が入ります。 ここに文章が入ります。<br>
+            ここに文章が入ります。 ここに文章が入ります。
+          </p>
+        </div>
+      </li>
+
+      <li class="animationTarget">
+         <%= image_tag("img9.jpg", class: :photo) %>
+        <div class="contentsText">
+          <h2>Dummy Title</h2>
+          <p>
+            ここに文章が入ります。 ここに文章が入ります。 ここに文章が入ります。<br>
+            ここに文章が入ります。 ここに文章が入ります。
+          </p>
+        </div>
+      </li>
+
+      <li class="animationTarget">
+         <%= image_tag("img3.jpg", class: :photo) %>
+        <div class="contentsText">
+          <h2>Dummy Title</h2>
+          <p>
+            ここに文章が入ります。 ここに文章が入ります。 ここに文章が入ります。<br>
+            ここに文章が入ります。 ここに文章が入ります。
+          </p>
+        </div>
+      </li>
+    </ul>
+
+
+
+  </main>
+</body>
+</html>
