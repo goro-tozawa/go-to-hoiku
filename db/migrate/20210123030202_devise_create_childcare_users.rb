@@ -14,7 +14,6 @@ class DeviseCreateChildcareUsers < ActiveRecord::Migration[6.0]
       t.integer :times_id,              null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.integer :calendar_id,              null: false
       t.text :self_introduction
 
 
