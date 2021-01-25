@@ -13,6 +13,7 @@
 <!-- 資格を持っているか -->
 | gender_id | integer | null: false|
 <!-- 男女でできる仕事が違う可能性があるため -->
+| calendar_id | integer | null: false|
 | self_introduction | text | -------- |
 - has_many :works
 - belongs_to :childcare_user
@@ -32,6 +33,7 @@
 | representative_phone_number | string | null: false|
 | times_id | integer | null: false |
 | encrypted_password | string | null: false |
+| calendar_id | integer | null: false|
 | self_introduction | text | -------- |
 - has_many :works
 - has_many :childcare_user
