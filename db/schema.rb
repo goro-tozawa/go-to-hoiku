@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2021_01_24_015620) do
     t.string "postal_code", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.integer "qualification_id", null: false
+    t.string "qualification", null: false
     t.integer "gender_id", null: false
     t.text "self_introduction"
     t.string "reset_password_token"
