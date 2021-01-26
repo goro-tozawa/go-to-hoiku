@@ -13,7 +13,8 @@
 <!-- 資格を持っているか -->
 | gender | string | null: false|
 <!-- 男女でできる仕事が違う可能性があるため -->
-| calendar_id | integer | null: false|
+<!-- | calendar_id | integer | null: false| -->
+カレンダーは新規登録には必要ない？
 | self_introduction | text | -------- |
 - has_many :works
 - belongs_to :childcare_user
