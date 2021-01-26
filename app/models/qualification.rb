@@ -8,5 +8,5 @@ class Qualification < ActiveHash::Base
     { id: 6, name: '特になし' }
   ]
     include ActiveHash::Associations
-    has_many :users
+    belongs_to :user
   end
