@@ -65,33 +65,38 @@
         <%= f.text_field :postal_code, class:"input-default", id:"postal-code", placeholder:"例）123-4567", maxlength:"8" %>
     </div>
 
+
+
   <div class="form-group">
           <label class="form-text">資格</label>
                 <span class="indispensable">必須</span>
       <%= form_with url:user_registration_path, model: @user, local: true do |form| %>
-        <%= form.radio_button :gender, :male %>
-        <%= form.label :gender, "保育士", {value: :male, style: "display: inline-block;"} %>
-        <%= form.radio_button :gender, :female %>
-        <%= form.label :gender, "幼稚園教諭", {value: :female, style: "display: inline-block;"} %>
-        <%= form.radio_button :gender, :female %>
-        <%= form.label :gender, "調理師", {value: :female, style: "display: inline-block;"} %>
-        <%= form.radio_button :gender, :female %>
-        <%= form.label :gender, "栄養士", {value: :female, style: "display: inline-block;"} %>
-        <%= form.radio_button :gender, :female %>
-        <%= form.label :gender, "介護士", {value: :female, style: "display: inline-block;"} %>
-        <%= form.radio_button :gender, :female %>
-        <%= form.label :gender, "その他", {value: :female, style: "display: inline-block;"} %>
+       <p>  <%= form.radio_button :gender, :male %>
+              <%= form.label :gender, "保育士", {value: :male, style: "display: inline-block;"} %></p>
+       <p>  <%= form.radio_button :gender, :female %>
+        <%= form.label :gender, "幼稚園教諭", {value: :female, style: "display: inline-block;"} %></p>  
+       <p> <%= form.radio_button :gender, :female %>
+             <%= form.label :gender, "調理師", {value: :female, style: "display: inline-block;"} %></p>
+        <p><%= form.radio_button :gender, :female %>
+             <%= form.label :gender, "栄養士", {value: :female, style: "display: inline-block;"} %></p>
+        <p><%= form.radio_button :gender, :female %>
+             <%= form.label :gender, "介護士", {value: :female, style: "display: inline-block;"} %></p>
+        <p><%= form.radio_button :gender, :female %>
+             <%= form.label :gender, "その他", {value: :female, style: "display: inline-block;"} %></p>
           <% end %>
     </div>
 
-    <%# <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">資格</label>
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:qualification_id, Qualification.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
-    <%# </div>  %> 
-  カテゴリーがうまく入らないので上記は保留。
+    <div class="form-group">
+          <label class="form-text">性別</label>
+                <span class="indispensable">必須</span>
+      <%= form_with url:user_registration_path, model: @user, local: true do |form| %>
+       <p>  <%= form.radio_button :gender, :male %>
+              <%= form.label :gender, "男性", {value: :male, style: "display: inline-block;"} %></p>
+       <p>  <%= form.radio_button :gender, :female %>
+        <%= form.label :gender, "女性", {value: :female, style: "display: inline-block;"} %></p>  
+          <% end %>
+    </div>
+
 
    <div class="field">
     <%= f.label :password %>

@@ -9,9 +9,9 @@
 | postal_code | string | null: false |
 | email | string | null: false | unique: true |
 | encrypted_password | string | null: false |
-| qualification_id | integer | null: false |
+| qualification | integer | null: false |
 <!-- 資格を持っているか -->
-| gender_id | integer | null: false|
+| gender | string | null: false|
 <!-- 男女でできる仕事が違う可能性があるため -->
 | calendar_id | integer | null: false|
 | self_introduction | text | -------- |
