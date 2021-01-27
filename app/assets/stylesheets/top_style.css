@@ -4,7 +4,8 @@ body{
   font-family: serif;
   background-color: #ffffff;
   columns: #111111;
-  height: 5000px;
+  height: 500px;
+  position: relative;
 }
 
 *,
@@ -20,14 +21,6 @@ body{
   padding: 20px 0;
 }
 
-
-body{
-    font-family: serif;
-    background-color: #ffffff;
-    columns: #111111;
-    height: 500px;
-    margin: 0 auto;
-}
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
@@ -83,19 +76,18 @@ header h1{
   white-space: nowrap;
 } */
 
-main{
+/* main{
  max-width: 1000px; 
  width: 100%;
  margin: 0 auto; 
  /* margin: 50% auto;とカリキュラムではなっている   */
 
-}
 
 
 
 
 .breadth img{
-  width: 100%;
+  width: 100vw
 }
 
 .top-contentsText{
