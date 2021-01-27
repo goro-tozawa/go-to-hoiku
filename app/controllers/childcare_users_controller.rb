@@ -1,2 +1,3 @@
 class ChildcareUsersController < ApplicationController
+  
 end
