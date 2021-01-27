@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+body{
+  font-family: serif;
+  background-color: #ffffff;
+  columns: #111111;
+  height: 5000px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+
+.top-header{
+  background-color: #f1f8fe;
+  padding: 20px 0;
+}
+
+
+body{
+    font-family: serif;
+    background-color: #ffffff;
+    columns: #111111;
+    height: 500px;
+    margin: 0 auto;
+}
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .page-heading {
+    font-size: 24px;
+  }
+  .card {
+    width: 48%;
+    margin-bottom: 40px;
+  }
+  .prototype_image{
+    width: 60%;
+  }
+}
+
+ /* スマホ表示 */
+@media (max-width: 599px) {
+  .logo {
+    width: 120px;
+  }
+  .page-heading {
+    font-size: 20px;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .card__title {
+    font-size: 18px;
+  }
+  .card__summary {
+    font-size: 14px;
+  }
+  .prototype_image{
+    width: 100%;
+  }
+  .table{
+    width: 100%;
+  }
+}
+/* header{
+  padding: 50px;
+}
+
+header h1{
+  font-size:  70px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  white-space: nowrap;
+} */
+
+main{
+ max-width: 1000px; 
+ width: 100%;
+ margin: 0 auto; 
+ /* margin: 50% auto;とカリキュラムではなっている   */
+
+}
+
+
+
+
+.breadth img{
+  width: 100%;
+}
+
+.top-contentsText{
+  display: block;
+  text-align: center;
+  flex-direction: row; 
+  align-items: center;
+  position: absolute;
+  top: 50px; 
+}
+
+img.general{
+  /* position: absolute; */
+  width: 25%;
+  height: 25%;
+  padding-top: 500px; 
+}
+
+img.enterprise{
+  width: 25%;
+  height: 25%;
+}
+
+
+
+.top-contents h2{
+  font-size: 50px;
+  font-weight: bold;
+  white-space: nowrap;
+  background-color: rgba(20, 20, 20, .8);
+  color: #fff;
+  padding: 10px 20px;
+  line-height: 1.4;
+  letter-spacing: .05em;
+  border-radius:  5px;
+}
+
+
