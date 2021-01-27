@@ -1,0 +1,2 @@
+class ChildcareUsersController < ApplicationController
+end
