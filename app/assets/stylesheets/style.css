@@ -176,11 +176,12 @@ main{
 }
 
 .top-contentsText{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  display: block;
+  text-align: center;
+  flex-direction: column; 
+  align-items: center;
   position: absolute;
-  top: 40px;
+  top: 50px; 
 }
 
 .contents h2{
@@ -223,7 +224,7 @@ main{
   border-radius: 5px;
 }
 
-.top-contents p{
+/* .top-contents p{
   line-height: 1.6;
   background-color: #555;
   font-size: 14px;
@@ -231,7 +232,7 @@ main{
   padding: 15px;
   margin-top: 30px;
   border-radius: 5px;
-}
+} */
 
 .photo{
   box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.25);
