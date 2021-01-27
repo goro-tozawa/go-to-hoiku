@@ -65,6 +65,7 @@ body{
 
 
 
+
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .inner {
@@ -236,4 +237,14 @@ main{
 
 .photo{
   box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.25);
+}
+
+img.general{
+  width: 25%;
+  height: 25%;
+}
+
+img.enterprise{
+  width: 25%;
+  height: 25%;
 }
