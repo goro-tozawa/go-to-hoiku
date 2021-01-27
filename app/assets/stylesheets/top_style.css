@@ -100,15 +100,15 @@ header h1{
 }
 
 img.general{
-  /* position: absolute; */
   width: 25%;
   height: 25%;
-  padding-top: 500px; 
+  top: 500px; 
 }
 
 img.enterprise{
   width: 25%;
   height: 25%;
+  padding-top: 600px;
 }
 
 
