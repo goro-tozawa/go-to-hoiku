@@ -84,12 +84,12 @@
 
 .input-name-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .input-name {
-  width: 130px;
+  width: 170px;
   margin: 5px 20px 0 20px;
   height: 48px;
   line-height: 30px;
@@ -99,6 +99,11 @@
   background: #fff;
   font-size: 14px;
   resize: none;
+}
+
+.input-name-self_introduction{
+  width: 800px;
+  height: 180px;
 }
 
 .input-birth-wrap {
