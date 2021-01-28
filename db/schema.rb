@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 2021_01_27_025608) do
   create_table "childcare_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "facility_name", null: false
     t.string "facility_name_kana", null: false
-    t.integer "business_form", null: false
+    t.string "business_form", null: false
     t.string "facility_address", null: false
     t.string "facility_phone_number", null: false
     t.string "representative", null: false
     t.string "representative_phone_number", null: false
-    t.integer "times_id", null: false
+    t.string "times", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.text "self_introduction"
