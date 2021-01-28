@@ -131,6 +131,7 @@
 .form-bottom-text {
   font-size: 15px;
   margin-top: 10px;
+  padding-top: 750px;
   text-align: center;
 }
 
@@ -147,6 +148,7 @@
 .register-btn {
   width: 50%;
   margin: 0 auto;
+  padding-top: 10px;
 }
 
 .register-red-btn {
