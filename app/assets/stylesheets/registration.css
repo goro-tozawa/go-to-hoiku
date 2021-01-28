@@ -101,6 +101,11 @@
   resize: none;
 }
 
+.input-name-self_introduction{
+  width: 800px;
+  height: 180px;
+}
+
 .input-birth-wrap {
   display: flex;
   flex-wrap: wrap;
