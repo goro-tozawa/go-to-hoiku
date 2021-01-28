@@ -5,7 +5,7 @@
 | name | string | null: false |
 | name_kana | string | null: false|
 | birthday | date | null: false |
-| nick_name | string | null: false|
+| nickname | string | null: false|
 | postal_code | string | null: false |
 | email | string | null: false | unique: true |
 | encrypted_password | string | null: false |
