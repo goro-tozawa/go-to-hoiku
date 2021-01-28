@@ -24,15 +24,15 @@
 | facility_name| string | null: false |
 <!-- 施設名 -->
 | facility_name_kana | string | null: false|
-| business_form | integer | null: false|
+| business_form | string | null: false|
+<!-- 事業形態 -->
 | facility_address | string | null: false|
 | facility_phone_number | string | null: false|
 | representative | string | null: false|
 <!-- 代表者 -->
 | representative_phone_number | string | null: false|
-| times_id | integer | null: false |
+| times | string | null: false |
 | encrypted_password | string | null: false |
-| calendar_id | integer | null: false|
 | self_introduction | text | -------- |
 - has_many :works
 - has_many :user
