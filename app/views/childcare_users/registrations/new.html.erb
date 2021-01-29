@@ -1,4 +1,4 @@
-<%= form_with model: @childcare_user, url:  childcare_users_path,method: :post, class: 'registration-main', local: true do |f| %>
+<%= form_with model: @childcare_user, url:  childcare_user_registration_path,method: :post, class: 'registration-main', local: true do |f| %>
 <%# //「モデル名」にはUserモデルであれば@userを渡しましょう。「新規登録機能へのパス」は、devise導入後にrails routesを実行してdevise/registrations#createへのパスを確認し、記載してください。 %>
 <div class='form-wrap'>
   <div class='form-header'>
