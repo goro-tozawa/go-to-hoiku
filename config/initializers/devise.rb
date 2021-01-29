@@ -14,7 +14,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '729a7e267f553e696768db6b1f6eac236a29c4a828f53a5c9ef50b21d65c74bcaa9a6f1f2ac373b05719aabbaa3a77848be023bee21ba499809eda8e5151481f'
+  config.secret_key = true
+  # '729a7e267f553e696768db6b1f6eac236a29c4a828f53a5c9ef50b21d65c74bcaa9a6f1f2ac373b05719aabbaa3a77848be023bee21ba499809eda8e5151481f'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -252,7 +253,7 @@ Devise.setup do |config|
 
   # Set this configuration to false if you want /users/sign_out to sign out
   # only the current scope. By default, Devise signs out all scopes.
-  # config.sign_out_all_scopes = true
+  config.sign_out_all_scopes = false
 
   # ==> Navigation configuration
   # Lists the formats that should be treated as navigational. Formats like
