@@ -90,12 +90,11 @@
     <div class="form-group">
           <label class="form-text">性別</label>
                 <span class="indispensable">必須</span>
-      <%= form_with url:user_registration_path, model: @user, local: true do |form| %>
-       <p>  <%= form.radio_button :gender, :male %>
-              <%= form.label :gender, "男性", {value: :male, style: "display: inline-block;"} %></p>
-       <p>  <%= form.radio_button :gender, :female %>
-        <%= form.label :gender, "女性", {value: :female, style: "display: inline-block;"} %></p>  
-          <% end %>
+       <p>  <%= f.radio_button :gender, :male %>
+              <%= f.label :gender, "男性", {value: :male, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :gender, :female %>
+        <%= f.label :gender, "女性", {value: :female, style: "display: inline-block;"} %></p>  
+   
     </div>
 
   <div class="form-group">
@@ -144,7 +143,6 @@
   
     <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
   </div>
-  <%= form_with url:users_path, model: @user, local: true do |l| %>
   <div class="form-group">
     <h2 class='form-bottom-text'>
       「会員登録」のボタンを押すことにより、
@@ -158,7 +156,7 @@
   </div>
   <p class='register-info'>本人情報の登録について</p>
 </div>
- <% end %>
+
 <% end %>
 
 <%# <%= render "shared/second-footer"%> 

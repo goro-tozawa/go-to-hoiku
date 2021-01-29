@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_115021) do
     t.string "facility_phone_number", null: false
     t.string "representative", null: false
     t.string "representative_phone_number", null: false
-    t.string "times", null: false
+    t.integer "times", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.text "self_introduction"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_115021) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "qualification", null: false
-    t.string "gender", null: false
+    t.integer "gender", null: false
     t.text "self_introduction"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
