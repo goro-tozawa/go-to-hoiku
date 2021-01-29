@@ -12,7 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.string :qualification,              null: false
-      t.string :gender,            null: false
+      t.integer :gender,            null: false
       t.text :self_introduction
 
       ## Recoverable
