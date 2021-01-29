@@ -33,18 +33,22 @@
     <div class="form-group">
           <label class="form-text">事業形態</label>
                 <span class="indispensable">必須</span>
-      <%= form_with url:user_registration_path, model: @user, local: true do |form| %>
-       <p>  <%= form.radio_button :business_form, :male %>
-              <%= form.label :business_form, "認可保育園", {value: :male, style: "display: inline-block;"} %></p>
-       <p>  <%= form.radio_button :business_form, :female %>
-        <%= form.label :business_form, "幼稚園", {value: :female, style: "display: inline-block;"} %></p> 
+       <p>  <%= f.radio_button :business_form, :male %>
+              <%= f.label :business_form, "認可保育園", {value: :male, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :business_form, :male %>
+              <%= f.label :business_form, "無認可保育園", {value: :male, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :business_form, :female %>
+        <%= f.label :business_form, "幼稚園", {value: :female, style: "display: inline-block;"} %></p> 
 
-       <p>  <%= form.radio_button :business_form, :female %>
-        <%= form.label :business_form, "子ども園", {value: :female, style: "display: inline-block;"} %></p> 
+       <p>  <%= f.radio_button :business_form, :female %>
+        <%= f.label :business_form, "子ども園", {value: :female, style: "display: inline-block;"} %></p> 
 
-       <p>  <%= form.radio_button :business_form, :female %>
-        <%= form.label :business_form, "障害児施設", {value: :female, style: "display: inline-block;"} %></p>  
-          <% end %>
+       <p>  <%= f.radio_button :business_form, :female %>
+        <%= f.label :business_form, "障害児施設", {value: :female, style: "display: inline-block;"} %></p>
+
+       <p>  <%= f.radio_button :business_form, :female %>
+        <%= f.label :business_form, "その他", {value: :female, style: "display: inline-block;"} %></p>  
+        
     </div>
 
      <div class="form-group">
