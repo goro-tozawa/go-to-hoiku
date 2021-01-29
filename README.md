@@ -31,7 +31,7 @@
 | representative | string | null: false|
 <!-- 代表者 -->
 | representative_phone_number | string | null: false|
-| times | string | null: false |
+| times | integer | null: false |
 | encrypted_password | string | null: false |
 | self_introduction | text | -------- |
 - has_many :works
