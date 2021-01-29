@@ -71,20 +71,18 @@
   <div class="form-group">
           <label class="form-text">資格</label>
                 <span class="indispensable">必須</span>
-      <%= form_with url:user_registration_path , model: @user, local: true do |form| %>
-       <p>  <%= form.radio_button :qualification, :male %>
-              <%= form.label :qualification, "保育士", {value: :male, style: "display: inline-block;"} %></p>
-       <p>  <%= form.radio_button :qualification, :female %>
-        <%= form.label :qualification, "幼稚園教諭", {value: :female, style: "display: inline-block;"} %></p>  
-       <p> <%= form.radio_button :qualification, :female %>
-             <%= form.label :qualification, "調理師", {value: :female, style: "display: inline-block;"} %></p>
-        <p><%= form.radio_button :qualification, :female %>
-             <%= form.label :qualification, "栄養士", {value: :female, style: "display: inline-block;"} %></p>
-        <p><%= form.radio_button :qualification, :female %>
-             <%= form.label :qualification, "介護士", {value: :female, style: "display: inline-block;"} %></p>
-        <p><%= form.radio_button :qualification, :female %>
-             <%= form.label :qualification, "その他", {value: :female, style: "display: inline-block;"} %></p>
-          <% end %>
+       <p>  <%= f.radio_button :qualification, :male %>
+              <%= f.label :qualification, "保育士", {value: :male, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :qualification, :female %>
+        <%= f.label :qualification, "幼稚園教諭", {value: :female, style: "display: inline-block;"} %></p>  
+       <p> <%= f.radio_button :qualification, :female %>
+             <%= f.label :qualification, "調理師", {value: :female, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :qualification, :female %>
+             <%= f.label :qualification, "栄養士", {value: :female, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :qualification, :female %>
+             <%= f.label :qualification, "介護士", {value: :female, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :qualification, :female %>
+             <%= f.label :qualification, "その他", {value: :female, style: "display: inline-block;"} %></p>
     </div>
 
     <div class="form-group">

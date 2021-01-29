@@ -87,15 +87,17 @@
       </div>
    </div>
 
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label class="form-text">希望時間(全角)</label>
-        <span class="indispensable">必須 </span>
-      </div>
-      <div class='input-name-wrap'>
-        <%= f.text_area :times, class:"input-name",id:"times", placeholder:"例) 何月何日の○○時から〜○○時までの保育をよろしくお願い致します" %>
-      </div>
-   </div>
+     <div class="form-group">
+          <label class="form-text">希望時間</label>
+                <span class="indispensable">必須</span>
+       <p>  <%= f.radio_button :times, :male %>
+              <%= f.label :times, "午前 9:00~13:00", {value: :male, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :times, :female %>
+        <%= f.label :times, "午後 13:00~17:00", {value: :female, style: "display: inline-block;"} %></p>  
+       <p> <%= f.radio_button :times, :female %>
+             <%= f.label :times, "午後17:00~20:00", {value: :female, style: "display: inline-block;"} %></p>
+              <span class="indispensable">※この時間帯は清掃が主な仕事内容になります</span>
+   
 
   <div class="form-group">
     <div class='form-text-wrap'>
@@ -142,8 +144,6 @@
   
     <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
   </div>
-
-  <%= form_with url:user_registration_path, model: @user, local: true do |form| %>
   <div class="form-group">
     <h2 class='form-bottom-text'>
       「会員登録」のボタンを押すことにより、
@@ -156,7 +156,6 @@
   </div>
   <p class='register-info'>本人情報の登録について</p>
 </div> 
-<% end %> 
 <% end %>
 
 <%# <%= render "shared/second-footer"  %>
