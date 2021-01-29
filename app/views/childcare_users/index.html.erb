@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+ 
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <%# <header>
+    <h1>Picture ook Search</h1>
+  </header> %>
+    <header class="company_header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= image_tag("go-to-hoiku_rogo.png", class: :logo) %>
+          </div>
+          <%# ログインしているときは以下を表示するようにしましょう %>
+          <% if user_signed_in?  %>
+            <%# if user_signed_in? を追加 %>
+              <div class="nav__right">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete,  class: :nav__logout %>
+
+              </div> 
+            <% else %> 
+              
+              <div class="nav__right">
+                <%= link_to "go-to-hoikuとは？", works_path, class: :nav__btn %>
+                <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+                <%= link_to "新規登録",new_childcare_user_path, class: :nav__btn %>
+              </div>
+            <%# // ログインしているときは上記を表示するようにしましょう %>
+            <%# ログインしていないときは以下を表示するようにしましょう %>
+          <% end %>
+           <%# if user_signed_in?に対するendを追加 %>
+            <%# // ログインしていないときは上記を表示するようにしましょう %>
+        </div>
+      </div>
+    </header>
+
+  <main>
+    <!-- ul.contents>li.animationTarget*4>img[src="img/img$.jpg"]+.contentsText>h2{Dummy Title}+p{ここに文章が入ります} -->
+    <ul class="contents">
+      <li class="animationTarget">
+          <%= image_tag("img8.jpg", class: :photo) %>
+        <div class="contentsText">
+          <h2>Dummy Title</h2>
+          <p>
+            ここに文章が入ります。 ここに文章が入ります。 ここに文章が入ります。<br>
+            ここに文章が入ります。 ここに文章が入ります。
+          </p>
+        </div>
+      </li>
+
+      <li class="animationTarget">
+         <%= image_tag("img7.jpg", class: :photo) %>
+        <div class="contentsText">
+          <h2>Dummy Title</h2>
+          <p>
+            ここに文章が入ります。 ここに文章が入ります。 ここに文章が入ります。<br>
+            ここに文章が入ります。 ここに文章が入ります。
+          </p>
+        </div>
+      </li>
+
+      <li class="animationTarget">
+         <%= image_tag("img9.jpg", class: :photo) %>
+        <div class="contentsText">
+          <h2>Dummy Title</h2>
+          <p>
+            ここに文章が入ります。 ここに文章が入ります。 ここに文章が入ります。<br>
+            ここに文章が入ります。 ここに文章が入ります。
+          </p>
+        </div>
+      </li>
+
+      <li class="animationTarget">
+         <%= image_tag("img3.jpg", class: :photo) %>
+        <div class="contentsText">
+          <h2>Dummy Title</h2>
+          <p>
+            ここに文章が入ります。 ここに文章が入ります。 ここに文章が入ります。<br>
+            ここに文章が入ります。 ここに文章が入ります。
+          </p>
+        </div>
+      </li>
+    </ul>
+
+
+
+  </main>
+</body>
+</html>
