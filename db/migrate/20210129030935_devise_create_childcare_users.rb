@@ -10,7 +10,6 @@ class DeviseCreateChildcareUsers < ActiveRecord::Migration[6.0]
       t.string :facility_address,              null: false
       t.string :facility_phone_number,              null: false
       t.string :representative,              null: false
-      # 代表者
       t.string :representative_phone_number,              null: false
       t.integer :times,              null: false
       t.string :email,              null: false, default: ""
