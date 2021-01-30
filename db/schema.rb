@@ -54,10 +54,11 @@ ActiveRecord::Schema.define(version: 2021_01_29_030935) do
   end
 
   create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "area_id", null: false
-    t.integer "facility_name", null: false
-    t.integer "works_id", null: false
-    t.integer "times_id", null: false
+    t.string "job_description", null: false
+    t.integer "recruiting_number_id", null: false
+    t.integer "recruiting_days", null: false
+    t.integer "recruiting_times", null: false
+    t.integer "hourly_wage", null: false
     t.bigint "childcare_user_id", null: false
     t.index ["childcare_user_id"], name: "index_works_on_childcare_user_id"
   end
