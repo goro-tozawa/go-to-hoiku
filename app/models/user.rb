@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  belongs_to :childcare_user
 
   devise :database_authenticatable, 
    :registerable,

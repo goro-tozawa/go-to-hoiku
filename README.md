@@ -102,7 +102,6 @@
 | encrypted_password | string | null: false |
 | self_introduction | text | -------- |
 - has_many :works
-- has_many :user
 
 ## works
 <!-- 検索機能を追加実装したらいいかも？ -->
