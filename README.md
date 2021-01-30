@@ -1,59 +1,3 @@
-## users テーブル
-
-| Column | Type | Options |
-| ---------- | -------- | -------- |
-| name | string | null: false |
-| name_kana | string | null: false|
-| birthday | date | null: false |
-| nickname | string | null: false|
-| postal_code | string | null: false |
-| email | string | null: false | unique: true |
-| encrypted_password | string | null: false |
-| qualification | string | null: false |
-<!-- 資格を持っているか -->
-| gender | string | null: false|
-<!-- 男女でできる仕事が違う可能性があるため -->
-| self_introduction | text | -------- |
-- has_many :works
-- belongs_to :childcare_user
-
-## childcare_users テーブル
-
-| Column | Type | Options |
-| ---------- | -------- | -------- |
-| facility_name| string | null: false |
-<!-- 施設名 -->
-| facility_name_kana | string | null: false|
-| business_form | string | null: false|
-<!-- 事業形態 -->
-| facility_address | string | null: false|
-| facility_phone_number | string | null: false|
-| representative | string | null: false|
-<!-- 代表者 -->
-| representative_phone_number | string | null: false|
-| times | integer | null: false |
-| encrypted_password | string | null: false |
-| self_introduction | text | -------- |
-- has_many :works
-- has_many :user
-
-## works
-<!-- 検索機能を追加実装したらいいかも？ -->
-| Column | Type | Options |
-| ---------- | -------- | -------- |
-| area_id | integer | null: false |
-| facility_name| integer | null: false |
-| works_id| integer | null: false |
-| times_id | integer | null: false |
-| childcare_user | references | null: false |
-
-- belongs_to :user
-- belongs_to :childcare_user
-
-## contact_us
-<!-- 問い合わせ -->
-
-
 ### 要件定義
   1. アプリケーション概要 
   2. URL
@@ -109,3 +53,70 @@
 
 
   -  潜伏保育士（保育士の資格は持っているが、労働環境や人間関係の悩みなどの理由で働いていない保育士）のハードルを下げ、自分の好きな時間に働き、子どもと関われる環境づくりをプログラミングという観点から解決することが目標。
+
+#### 6.洗い出した要件
+  - 一般ユーザーと施設ユーザーの2つのユーザー管理機能を実装
+  - 一般ユーザーが仕事を探し、選択することのできるページ
+  - 施設ユーザーが仕事を依頼することができるページ
+
+#### 7. 実装した機能についてのGIFと説明
+
+#### 8. 実装予定の機能
+
+#### 9. データベース設計
+
+## users テーブル
+
+| Column | Type | Options |
+| ---------- | -------- | -------- |
+| name | string | null: false |
+| name_kana | string | null: false|
+| birthday | date | null: false |
+| nickname | string | null: false|
+| postal_code | string | null: false |
+| email | string | null: false | unique: true |
+| encrypted_password | string | null: false |
+| qualification | string | null: false |
+<!-- 資格を持っているか -->
+| gender | string | null: false|
+<!-- 男女でできる仕事が違う可能性があるため -->
+| self_introduction | text | -------- |
+- has_many :works
+- belongs_to :childcare_user
+
+## childcare_users テーブル
+
+| Column | Type | Options |
+| ---------- | -------- | -------- |
+| facility_name| string | null: false |
+<!-- 施設名 -->
+| facility_name_kana | string | null: false|
+| business_form | string | null: false|
+<!-- 事業形態 -->
+| facility_address | string | null: false|
+| facility_phone_number | string | null: false|
+| representative | string | null: false|
+<!-- 代表者 -->
+| representative_phone_number | string | null: false|
+| times | integer | null: false |
+| encrypted_password | string | null: false |
+| self_introduction | text | -------- |
+- has_many :works
+- has_many :user
+
+## works
+<!-- 検索機能を追加実装したらいいかも？ -->
+| Column | Type | Options |
+| ---------- | -------- | -------- |
+| job_description | string | null: false|
+| recruiting_number_id | integer | null: false |
+| recruiting_days| integer | null: false |
+| recruiting_times| integer | null: false |
+| hourly_wage | integer | null: false |
+| childcare_user | references | null: false |
+
+- belongs_to :user
+- belongs_to :childcare_user
+
+
+#### 10. ローカルでの動作作法
