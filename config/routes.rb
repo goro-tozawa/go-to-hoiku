@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  root to: "tops#index"
+  root to: "works#index"
   resources :users
   resources :childcare_users
   resources :works

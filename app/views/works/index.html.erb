@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+ 
+  <link rel="stylesheet" href="top_style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="top-header">
+            <%= image_tag("go-to-hoiku_rogo.png", class: :logo) %>
+    </header>
+
+      <div class="top-main">
+        <p class="breadth">
+           <%= image_tag("mainimg.png", class: :top_photo) %>
+        </p>   
+    <!-- ul.contents>li.animationTarget*4>img[src="img/img$.jpg"]+.contentsText>h2{Dummy Title}+p{ここに文章が入ります} -->
+        <div class="top-contentsText">
+          <%= link_to image_tag("img11.png", class: :general ),users_path %>
+          <%= link_to image_tag("img10.png", class: :enterprise ),childcare_users_path %>
+        </div>
+        <div class='item-contents'>
+    <h2 class='title'>お仕事一覧</h2>
+    <%= link_to '新規投稿商品', new_work_path, class: "subtitle" %>
+    <ul class='item-lists'>
+
+    <%# <%= image_tag @work.image, class: "item-img" %> 
+        
+    <footer class="top-footer">
+    </footer>
+</body>
+</html>
