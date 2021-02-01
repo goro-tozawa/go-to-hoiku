@@ -9,7 +9,7 @@ class WorksController < ApplicationController
 
   def create 
     @work = Work.new(work_params)
-    # binding.pry
+    binding.pry
     
     if @work.save
       redirect_to root_path
