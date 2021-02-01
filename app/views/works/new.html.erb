@@ -1,19 +1,20 @@
 <div class="items-sell-contents">
   <header class="items-sell-header">
-    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+    <%= link_to image_tag('go-to-hoiku_rogo.png' , size: '185x50'), "/" %>
 
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">仕事内容の情報を入力</h2>
   <%= form_with(model: @work, local: true) do |f| %>
   
-    <%= render 'shared/error_messages', model: f.object %>
+    <%# <%= render 'shared/error_messages', model: f.object %> 
+    <%# エラーメッセージ %>
     
 
     <%# 出品画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">
-        出品画像
+        職場画像
         <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
@@ -23,7 +24,8 @@
         <%= f.file_field :image, id:"item-image" %>
       </div>
     </div>
-  
+        <label class="form-text">仕事内容</label>
+        <span class="indispensable">必須</span>
         <%= f.text_area :job_description, class:"items-text", id:"job-description", placeholder:"仕事の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）子どもと一緒に食事をし、掃除をする簡単なお仕事です" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
@@ -32,16 +34,16 @@
      <div class="form-group">
           <label class="form-text">募集人数</label>
                 <span class="indispensable">必須</span>
-       <p>  <%= f.radio_button :qualification, :male %>
-              <%= f.label :qualification, "1人", {value: :male, style: "display: inline-block;"} %></p>
-       <p>  <%= f.radio_button :qualification, :female %>
-        <%= f.label :qualification, "2人", {value: :female, style: "display: inline-block;"} %></p>  
-       <p> <%= f.radio_button :qualification, :female %>
-             <%= f.label :qualification, "３人", {value: :female, style: "display: inline-block;"} %></p>
-        <p><%= f.radio_button :qualification, :female %>
-             <%= f.label :qualification, "4人", {value: :female, style: "display: inline-block;"} %></p>
-        <p><%= f.radio_button :qualification, :female %>
-             <%= f.label :qualification, "その他", {value: :female, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :person, :number %>
+              <%= f.label :person, "1人", {value: :number, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :person, :number %>
+        <%= f.label :person, "2人", {value: :number, style: "display: inline-block;"} %></p>  
+       <p> <%= f.radio_button :person, :number %>
+             <%= f.label :person, "3人", {value: :number, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :person, :number %>
+             <%= f.label :person, "4人", {value: :number, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :person, :number %>
+             <%= f.label :person, "その他", {value: :number, style: "display: inline-block;"} %></p>
     </div>
 
      <%# recruiting_daysのカレンダーを挿入 %>
@@ -52,7 +54,7 @@
             <span class="indispensable">必須</span>
           </div>
           <span class="sell-yen">最大</span>
-          <%= f.text_field :recruiting_times, class:"price-input", id:"item-price", placeholder:"例）04:00" %>
+          <%= f.text_field :recruiting_times, class:"price-input", id:"recruiting-times", placeholder:"例）04:00" %>
           <span class="sell-yen">時間</span>
         </div>
 
@@ -61,7 +63,7 @@
             <span>時給</span>
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :hourly_wage, class:"price-input", id:"item-price", placeholder:"例）04:00" %>
+          <%= f.text_field :hourly_wage, class:"price-input", id:"hourly_wage", placeholder:"例）900" %>
           <span class="sell-yen">円 時給/時間</span>
         </div>
 
@@ -81,12 +83,12 @@
   <footer class="items-sell-footer">
     <ul class="menu">
       <li><a href="#">プライバシーポリシー</a></li>
-      <li><a href="#">フリマ利用規約</a></li>
+      <li><a href="#">go-to-hoiku利用規約</a></li>
       <li><a href="#">特定商取引に関する表記</a></li>
     </ul>
-    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+    <%= link_to image_tag('go-to-hoiku_rogo.png' , size: '185x50'), "/" %>
     <p class="inc">
-      ©︎Furima,Inc.
+      ©︎Go-to-hoiku,Inc.
     </p>
   </footer>
 </div>
