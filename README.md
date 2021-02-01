@@ -57,7 +57,7 @@
 #### 6.洗い出した要件
   - 一般ユーザーと施設ユーザーの2つのユーザー管理機能を実装
   - 一般ユーザーが仕事を探し、選択することのできるページ
-  - 施設ユーザーが仕事を依頼することができるページ
+  - 施設ユーザーがことができるページ
 
 #### 7. 実装した機能についてのGIFと説明
 
@@ -83,7 +83,6 @@
 | self_introduction | text | -------- |
 - has_many :works
 - belongs_to :childcare_user
-
 ## childcare_users テーブル
 
 | Column | Type | Options |
@@ -107,8 +106,12 @@
 <!-- 検索機能を追加実装したらいいかも？ -->
 | Column | Type | Options |
 | ---------- | -------- | -------- |
+| work_title | string | null: false|
+| facility_name| string | null: false|
 | job_description | string | null: false|
-| recruiting_number_id | integer | null: false |
+<!-- 仕事内容 -->
+| person | integer | null: false |
+<!-- 募集人数 -->
 | recruiting_days| integer | null: false |
 | recruiting_times| integer | null: false |
 | hourly_wage | integer | null: false |

@@ -1,0 +1,118 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%= link_to image_tag('go-to-hoiku_rogo.png' , size: '185x50'), "/" %>
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">仕事内容の情報を入力</h2>
+    
+  <%= form_with(model: @work, local: true) do |f| %>
+  
+    <%# <%= render 'shared/error_messages', model: f.object %> 
+    <%# エラーメッセージ %>
+    
+
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        職場画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">タイトル(全角)</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <div class='input-name-wrap'>
+        <%= f.text_area :work_title, class:"input-name", id:"work-title", placeholder:"例) 夕方に働ける保育士募集!!" %>
+      </div>
+   </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">施設名(全角)</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <div class='input-name-wrap'>
+        <%= f.text_area :facility_name, class:"input-name", id:"facility-name", placeholder:"戸澤仲良し保育園" %>
+      </div>
+   </div>
+
+        <label class="form-text">仕事内容</label>
+        <span class="indispensable">必須</span>
+        <%= f.text_area :job_description, class:"items-text", id:"job-description", placeholder:"仕事の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）子どもと一緒に食事をし、掃除をする簡単なお仕事です" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <%# 商品の詳細 %>
+     <div class="form-group">
+          <label class="form-text">募集人数</label>
+                <span class="indispensable">必須</span>
+       <p>  <%= f.radio_button :person, :1 %>
+              <%= f.label :person, "1人", {value: :1, style: "display: inline-block;"} %></p>
+       <p>    <%= f.label :person, :number %>
+                <%= f.radio_button :person, 1 %> </p>
+       <p>  <%= f.radio_button :person, :2 %>
+        <%= f.label :person, "2人", {value: :2, style: "display: inline-block;"} %></p>  
+       <p> <%= f.radio_button :person, :3 %>
+             <%= f.label :person, "3人", {value: :3, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :person, :4 %>
+             <%= f.label :person, "4人", {value: :4, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :person, :other %>
+             <%= f.label :person, "その他", {value: :other, style: "display: inline-block;"} %></p>
+    </div>
+
+     <%# recruiting_daysのカレンダーを挿入 %>
+
+     <div class="price-content">
+          <div class="price-text">
+            <span>仕事時間</span>
+            <span class="indispensable">必須</span>
+          </div>
+          <span class="sell-yen">最大</span>
+          <%= f.text_field :recruiting_times, class:"price-input", id:"recruiting-times", placeholder:"例）04:00" %>
+          <span class="sell-yen">時間</span>
+        </div>
+
+     <div class="price-content">
+          <div class="price-text">
+            <span>時給</span>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_field :hourly_wage, class:"price-input", id:"hourly-wage", placeholder:"例）900" %>
+          <span class="sell-yen">円 時給/時間</span>
+        </div>
+
+    <%# 職場までの地図を挿入予定 %>
+
+    
+  
+    <div class="sell-btn-contents">
+      <%= f.submit "仕事を依頼する", class:"sell-btn" %>
+      <%# 出品するにroot_pathを追加 %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+  <footer class="items-sell-footer">
+    <ul class="menu">
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">go-to-hoiku利用規約</a></li>
+      <li><a href="#">特定商取引に関する表記</a></li>
+    </ul>
+    <%= link_to image_tag('go-to-hoiku_rogo.png' , size: '185x50'), "/" %>
+    <p class="inc">
+      ©︎Go-to-hoiku,Inc.
+    </p>
+  </footer>
+</div>
