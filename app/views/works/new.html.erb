@@ -5,6 +5,7 @@
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">仕事内容の情報を入力</h2>
+    
   <%= form_with(model: @work, local: true) do |f| %>
   
     <%# <%= render 'shared/error_messages', model: f.object %> 
@@ -41,7 +42,7 @@
         <span class="indispensable">必須</span>
       </div>
       <div class='input-name-wrap'>
-        <%= f.text_area :facility_name, class:"input-name", id:"facility_name", placeholder:"例) 夕方に働ける保育士募集!!" %>
+        <%= f.text_area :facility_name, class:"input-name", id:"facility-name", placeholder:"戸澤仲良し保育園" %>
       </div>
    </div>
 
@@ -55,16 +56,16 @@
      <div class="form-group">
           <label class="form-text">募集人数</label>
                 <span class="indispensable">必須</span>
-       <p>  <%= f.radio_button :person, :number %>
-              <%= f.label :person, "1人", {value: :number, style: "display: inline-block;"} %></p>
-       <p>  <%= f.radio_button :person, :number %>
-        <%= f.label :person, "2人", {value: :number, style: "display: inline-block;"} %></p>  
-       <p> <%= f.radio_button :person, :number %>
-             <%= f.label :person, "3人", {value: :number, style: "display: inline-block;"} %></p>
-        <p><%= f.radio_button :person, :number %>
-             <%= f.label :person, "4人", {value: :number, style: "display: inline-block;"} %></p>
-        <p><%= f.radio_button :person, :number %>
-             <%= f.label :person, "その他", {value: :number, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :person, :person_1 %>
+              <%= f.label :person, "1人", {value: :person_1, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :person, :person_2 %>
+        <%= f.label :person, "2人", {value: :person_2, style: "display: inline-block;"} %></p>  
+       <p> <%= f.radio_button :person, :person_3 %>
+             <%= f.label :person, "3人", {value: :person_3, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :person, :person_4 %>
+             <%= f.label :person, "4人", {value: :person_4, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :person, :other %>
+             <%= f.label :person, "その他", {value: :other, style: "display: inline-block;"} %></p>
     </div>
 
      <%# recruiting_daysのカレンダーを挿入 %>
