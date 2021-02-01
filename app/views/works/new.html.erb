@@ -4,7 +4,7 @@
 
   </header>
   <div class="items-sell-main">
-    <h2 class="items-sell-title">商品の情報を入力</h2>
+    <h2 class="items-sell-title">仕事内容の情報を入力</h2>
   <%= form_with(model: @work, local: true) do |f| %>
   
     <%= render 'shared/error_messages', model: f.object %>
@@ -23,99 +23,47 @@
         <%= f.file_field :image, id:"item-image" %>
       </div>
     </div>
-    <%# /出品画像 %>
-    <%# 商品名と商品説明 %>
-    <div class="new-items">
-      <div class="weight-bold-text">
-        商品名
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.text_area :item_name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
-      <div class="items-explain">
-        <div class="weight-bold-text">
-          商品の説明
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.text_area :details, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
+  
+        <%= f.text_area :job_description, class:"items-text", id:"job-description", placeholder:"仕事の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）子どもと一緒に食事をし、掃除をする簡単なお仕事です" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
-    <%# /商品名と商品説明 %>
 
     <%# 商品の詳細 %>
-    <div class="items-detail">
-      <div class="weight-bold-text">商品の詳細</div>
-      <div class="form">
-        <div class="weight-bold-text">
-          カテゴリー
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-        
-        <div class="weight-bold-text">
-          商品の状態
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:state_id, State.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
-      </div>
+     <div class="form-group">
+          <label class="form-text">募集人数</label>
+                <span class="indispensable">必須</span>
+       <p>  <%= f.radio_button :qualification, :male %>
+              <%= f.label :qualification, "1人", {value: :male, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :qualification, :female %>
+        <%= f.label :qualification, "2人", {value: :female, style: "display: inline-block;"} %></p>  
+       <p> <%= f.radio_button :qualification, :female %>
+             <%= f.label :qualification, "３人", {value: :female, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :qualification, :female %>
+             <%= f.label :qualification, "4人", {value: :female, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :qualification, :female %>
+             <%= f.label :qualification, "その他", {value: :female, style: "display: inline-block;"} %></p>
     </div>
-    <%# /商品の詳細 %>
 
-    <%# 配送について %>
-    <div class="items-detail">
-      <div class="weight-bold-text question-text">
-        <span>配送について</span>
-        <a class="question" href="#">?</a>
-      </div>
-      <div class="form">
-        <div class="weight-bold-text">
-          配送料の負担
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:burden_id , Burden.all, :id , :name , {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
-        <div class="weight-bold-text">
-          発送元の地域
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
-        <div class="weight-bold-text">
-          発送までの日数
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
-      </div>
-    </div>
-    <%# /配送について %>
+     <%# recruiting_daysのカレンダーを挿入 %>
 
-    <%# 販売価格 %>
-    <div class="sell-price">
-      <div class="weight-bold-text question-text">
-        <span>販売価格<br>(¥300〜9,999,999)</span>
-        <a class="question" href="#">?</a>
-      </div>
-      <div>
-        <div class="price-content">
+     <div class="price-content">
           <div class="price-text">
-            <span>価格</span>
+            <span>仕事時間</span>
             <span class="indispensable">必須</span>
           </div>
-          <span class="sell-yen">¥</span>
-          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+          <span class="sell-yen">最大</span>
+          <%= f.text_field :recruiting_times, class:"price-input", id:"item-price", placeholder:"例）04:00" %>
+          <span class="sell-yen">時間</span>
         </div>
-        <div class="price-content">
-          <span>販売手数料 (10%)</span>
-          <span>
-            <span id='add-tax-price'></span>円
-          </span>
+
+     <div class="price-content">
+          <div class="price-text">
+            <span>時給</span>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_field :hourly_wage, class:"price-input", id:"item-price", placeholder:"例）04:00" %>
+          <span class="sell-yen">円 時給/時間</span>
         </div>
-        <div class="price-content">
-          <span>販売利益</span>
-          <span>
-            <span id='profit'></span>円
-        </div>
-        </span>
-      </div>
-    </div>
-    <%# /販売価格 %>
 
     <%# 注意書き %>
     <div class="caution">

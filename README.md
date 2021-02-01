@@ -108,7 +108,9 @@
 | Column | Type | Options |
 | ---------- | -------- | -------- |
 | job_description | string | null: false|
-| recruiting_number_id | integer | null: false |
+<!-- 仕事内容 -->
+| person_id | integer | null: false |
+<!-- 募集人数 -->
 | recruiting_days| integer | null: false |
 | recruiting_times| integer | null: false |
 | hourly_wage | integer | null: false |
