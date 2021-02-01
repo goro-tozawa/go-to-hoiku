@@ -56,14 +56,16 @@
      <div class="form-group">
           <label class="form-text">募集人数</label>
                 <span class="indispensable">必須</span>
-       <p>  <%= f.radio_button :person, :person_1 %>
-              <%= f.label :person, "1人", {value: :person_1, style: "display: inline-block;"} %></p>
-       <p>  <%= f.radio_button :person, :person_2 %>
-        <%= f.label :person, "2人", {value: :person_2, style: "display: inline-block;"} %></p>  
-       <p> <%= f.radio_button :person, :person_3 %>
-             <%= f.label :person, "3人", {value: :person_3, style: "display: inline-block;"} %></p>
-        <p><%= f.radio_button :person, :person_4 %>
-             <%= f.label :person, "4人", {value: :person_4, style: "display: inline-block;"} %></p>
+       <p>  <%= f.radio_button :person, :1 %>
+              <%= f.label :person, "1人", {value: :1, style: "display: inline-block;"} %></p>
+       <p>    <%= f.label :person, :number %>
+                <%= f.radio_button :person, 1 %> </p>
+       <p>  <%= f.radio_button :person, :2 %>
+        <%= f.label :person, "2人", {value: :2, style: "display: inline-block;"} %></p>  
+       <p> <%= f.radio_button :person, :3 %>
+             <%= f.label :person, "3人", {value: :3, style: "display: inline-block;"} %></p>
+        <p><%= f.radio_button :person, :4 %>
+             <%= f.label :person, "4人", {value: :4, style: "display: inline-block;"} %></p>
         <p><%= f.radio_button :person, :other %>
              <%= f.label :person, "その他", {value: :other, style: "display: inline-block;"} %></p>
     </div>
