@@ -24,6 +24,27 @@
         <%= f.file_field :image, id:"item-image" %>
       </div>
     </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">タイトル(全角)</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <div class='input-name-wrap'>
+        <%= f.text_area :work_title, class:"input-name", id:"work-title", placeholder:"例) 夕方に働ける保育士募集!!" %>
+      </div>
+   </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">施設名(全角)</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <div class='input-name-wrap'>
+        <%= f.text_area :facility_name, class:"input-name", id:"facility_name", placeholder:"例) 夕方に働ける保育士募集!!" %>
+      </div>
+   </div>
+
         <label class="form-text">仕事内容</label>
         <span class="indispensable">必須</span>
         <%= f.text_area :job_description, class:"items-text", id:"job-description", placeholder:"仕事の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）子どもと一緒に食事をし、掃除をする簡単なお仕事です" ,rows:"7" ,maxlength:"1000" %>
@@ -63,7 +84,7 @@
             <span>時給</span>
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :hourly_wage, class:"price-input", id:"hourly_wage", placeholder:"例）900" %>
+          <%= f.text_field :hourly_wage, class:"price-input", id:"hourly-wage", placeholder:"例）900" %>
           <span class="sell-yen">円 時給/時間</span>
         </div>
 

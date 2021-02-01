@@ -106,6 +106,8 @@
 <!-- 検索機能を追加実装したらいいかも？ -->
 | Column | Type | Options |
 | ---------- | -------- | -------- |
+| work_name | string | null: false|
+| place | string | null: false|
 | job_description | string | null: false|
 <!-- 仕事内容 -->
 | person | integer | null: false |
