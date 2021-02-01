@@ -1,6 +1,7 @@
 class ChildcareUser < ApplicationRecord
-
-  devise :database_authenticatable, :registerable,
+  has_many :works
+  devise :database_authenticatable, 
+   :registerable,
          :recoverable, :rememberable, :validatable
   
    PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
