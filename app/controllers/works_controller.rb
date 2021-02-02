@@ -23,6 +23,12 @@ class WorksController < ApplicationController
     @work = Work.find(params[:id])
   end
 
+  def edit
+    # if @work..present? 
+    #   redirect_to root_path
+    # end
+  end
+
   private
   
   def work_params
