@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 2021_01_30_122928) do
     t.string "facility_name", null: false
     t.string "job_description", null: false
     t.integer "person", null: false
-    t.integer "recruiting_days", null: false
+    t.datetime "recruiting_days", null: false
     t.integer "recruiting_times", null: false
     t.integer "hourly_wage", null: false
     t.bigint "childcare_user_id", null: false
