@@ -19,12 +19,12 @@
         <%= @work.facility_name %>
       </span>
       <span class="item-postage">
-        <%= @work.recruiting_days %>
+        <%= "#{@work.hourly_wage}円/時間" %>
       </span>
     </div>
 
     <div class="item-explain-box">
-       <span><%= @work.facility_name %></span>
+       <span><%= @work.recruiting_times %></span>
     </div>  
     <table class="detail-table">
       <tbody>
@@ -50,13 +50,6 @@
         </tr>
       </tbody>
     </table>
-
-    <div class="option">
-        <span>お気に入り 0</span>
-      </div>
-      <div class="report-btn">
-        <span>不適切な仕事への通報</span>
-      </div>
     </div>
 
   </div>

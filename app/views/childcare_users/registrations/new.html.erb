@@ -31,25 +31,28 @@
       </div>
     </div> 
 
-    <div class="form-group">
+
+       <div class="form-group">
           <label class="form-text">事業形態</label>
                 <span class="indispensable">必須</span>
-       <p>  <%= f.radio_button :business_form, :male %>
-              <%= f.label :business_form, "認可保育園", {value: :male, style: "display: inline-block;"} %></p>
-       <p>  <%= f.radio_button :business_form, :male %>
-              <%= f.label :business_form, "無認可保育園", {value: :male, style: "display: inline-block;"} %></p>
-       <p>  <%= f.radio_button :business_form, :female %>
-        <%= f.label :business_form, "幼稚園", {value: :female, style: "display: inline-block;"} %></p> 
+         <p>  <%= f.radio_button :business_form, 1 %> 
+                <%= f.label :business_form, :"認可保育園" %>  </p>
 
-       <p>  <%= f.radio_button :business_form, :female %>
-        <%= f.label :business_form, "子ども園", {value: :female, style: "display: inline-block;"} %></p> 
+         <p>  <%= f.radio_button :business_form, 2 %> 
+                <%= f.label :business_form, :"無認可保育園" %>  </p>
 
-       <p>  <%= f.radio_button :business_form, :female %>
-        <%= f.label :business_form, "障害児施設", {value: :female, style: "display: inline-block;"} %></p>
+         <p>  <%= f.radio_button :business_form, 3 %> 
+                <%= f.label :business_form, :"幼稚園" %>  </p>
 
-       <p>  <%= f.radio_button :business_form, :female %>
-        <%= f.label :business_form, "その他", {value: :female, style: "display: inline-block;"} %></p>  
-        
+         <p>  <%= f.radio_button :business_form, 4 %> 
+                <%= f.label :business_form, :"子ども園" %>  </p>
+
+         <p>  <%= f.radio_button :business_form, 5 %> 
+                <%= f.label :business_form, :"障害児施設" %>  </p>
+
+         <p>  <%= f.radio_button :business_form, 6 %> 
+                <%= f.label :business_form, :"その他" %>  </p>
+      
     </div>
 
      <div class="form-group">
