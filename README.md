@@ -46,9 +46,8 @@
    - 仕事を依頼したら一般ユーザーからの登録を待ち、日時、連絡を取り合い、日程や仕事内容を確認する。
 
 #### 5.目指した目標
-  - 「タイミー」「農how」のように一般ユーザーの隙間時間に子どもに関わる施設で働いてもらうことで施設が抱えている人手不足の問題を解消する目的で「go-to-hoiku」を作成。  
+  - 「農how」のように一般ユーザーの隙間時間に子どもに関わる施設で働いてもらうことで施設が抱えている人手不足の問題を解消する目的で「go-to-hoiku」を作成。  
   - 引用
-  > 「タイミー」 URL:https://timee.co.jp/  
   > 「農how」 URL:https://agritrio.co.jp/nouhow.html
 
 
@@ -112,7 +111,7 @@
 <!-- 仕事内容 -->
 | person | integer | null: false |
 <!-- 募集人数 -->
-| recruiting_days| integer | null: false |
+| recruiting_days| datetime | null: false |
 | recruiting_times| integer | null: false |
 | hourly_wage | integer | null: false |
 | childcare_user | references | null: false |
