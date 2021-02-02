@@ -133,12 +133,12 @@
 }
 
 
-.form-bottom-text {
+/* .form-bottom-text {
   font-size: 15px;
   margin-top: 10px;
-  padding-top: 750px;
+  padding-top: 200px;
   text-align: center;
-}
+} */
 
 .form-bottom-text:last-child {
   margin: 0;
