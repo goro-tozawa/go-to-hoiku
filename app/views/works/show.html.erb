@@ -50,13 +50,13 @@
         </tr>
       </tbody>
     </table>
-    <% if childcare_user_signed_in? || user_signed_in?%>
+    <% if childcare_user_signed_in? %>
       <%# <% if current_childcare_user.id == @work.user_id %> 
           <%= link_to '仕事の編集',edit_work_path(@work.id), method: :get, class: "item-red-btn" %>
           <p class='or-text'>or</p>
           <%= link_to '削除',work_path(@work.id), method: :delete, class:'item-destroy' %>
 
-     <% elsif current_childcare_user.id != @work.user_id %>
+     <% elsif user_signed_in? %>
       <%= link_to '仕事を受ける', work_orders_path(@work.id), class:"item-red-btn"%>
     <%# <% end %> 
   <% end  %>
