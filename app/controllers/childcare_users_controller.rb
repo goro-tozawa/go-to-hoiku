@@ -3,6 +3,5 @@ class ChildcareUsersController < ApplicationController
   end
   
   def new
-   @childcare_user = Childcare_user.new 
   end
 end
