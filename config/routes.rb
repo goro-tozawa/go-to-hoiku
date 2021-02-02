@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'orders/index'
   devise_for :childcare_users, controllers: {
     sessions:      'childcare_users/sessions',
     passwords:     'childcare_users/passwords',
@@ -14,5 +15,7 @@ Rails.application.routes.draw do
   root to: "works#index"
   resources :users
   resources :childcare_users
-  resources :works
+  resources :works do
+   resources :orders
+  end
 end
