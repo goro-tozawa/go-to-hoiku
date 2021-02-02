@@ -1,6 +1,8 @@
 class WorksController < ApplicationController
   def index
-  #  @works = Work.includes(:childcare_user).order("created_at DESC")
+    @works = Work.includes(:childcare_user)
+    # order("created_at DESC")
+    # binding.pry
   end
 
   def new
@@ -9,7 +11,7 @@ class WorksController < ApplicationController
 
   def create 
     @work = Work.new(work_params)
-    binding.pry
+    
     
     if @work.save
       redirect_to root_path
