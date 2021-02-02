@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   def index
-  #  @works = Work.includes(:childcare_user).order("created_at DESC")
+   @works = Work.includes(:childcare_user).order("created_at DESC")
   end
 
   def new
