@@ -23,12 +23,22 @@
           <%= link_to image_tag("img11.png", class: :general ),users_path %>
           <%= link_to image_tag("img10.png", class: :enterprise ),childcare_users_path %>
         </div>
-        <div class='item-contents'>
-    <h2 class='title'>お仕事一覧</h2>
-    <%= link_to '新規仕事依頼', new_work_path, class: "subtitle" %>
-    <ul class='item-lists'>
 
-    <%# <%= image_tag @work.image, class: "item-img" %> 
+   <div class='item-contents'>
+        <h2 class='title'>お仕事一覧</h2>
+        <%= link_to '新規仕事依頼', new_work_path, class: "subtitle" %>
+
+   <% @works.each do |work| %>
+      <%# <li class='list'> %>
+      <%= link_to work_path(work.id) do %>
+      <div class='item-img-content'>
+        <%= image_tag work.image, class: "item-img" if work.image.attached?%>
+      </div>
+   <% end %>     
+   <% end %>
+  </div>
+
+      
         
     <footer class="top-footer">
     </footer>
