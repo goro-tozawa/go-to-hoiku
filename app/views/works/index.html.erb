@@ -34,6 +34,15 @@
       <div class='item-img-content'>
         <%= image_tag work.image, class: "item-img" if work.image.attached?%>
       </div>
+      
+      <div class='item-info'>
+          <h3 class='item-name'>
+            <%= work.work_title %>
+          </h3>
+          <div class='item-price'>
+            <span><%= work.facility_name %><br><%= work.recruiting_days %></span>
+          </div>
+        </div>
    <% end %>     
    <% end %>
   </div>
