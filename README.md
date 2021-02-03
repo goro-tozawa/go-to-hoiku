@@ -59,8 +59,29 @@
   - 施設ユーザーがことができるページ
 
 #### 7. 実装した機能についてのGIFと説明
+  - 一般ユーザーと施設側ユーザー、それぞれのページに遷移する
+
+
+   - URL: https://gyazo.com/0e69b89acba27b7339f14f7521b164bd
+   - URL: https://gyazo.com/dd692e7687aad2ef085b1654f5a05451
+
+
+  - 一般ユーザーと施設側ユーザー、それぞれの新規登録画面。（カラムが違うため、deviseで2つのモデルを作成）
+
+   - URL: https://gyazo.com/7e85e521de05f597b48ff580024727c5
+   - URL: https://gyazo.com/614c4194fc90a55d7f356fe334bf7bd7
+  
+  - radio_btn実装
+
+   - URL: https://gyazo.com/b88af878b1ce19ea3d4bba47cc35886a 
+  
+  - viewの見やすさ
+   - https://gyazo.com/3d5a8eaa94ee100de879d45c1bd01083
 
 #### 8. 実装予定の機能
+
+  - API GoogleMap(詳細ページで施設の位置を伝えるため)
+  - カレンダー（働ける日程をカレンダーから選択するため）
 
 #### 9. データベース設計
 
@@ -143,3 +164,48 @@
 
 
 #### 10. ローカルでの動作作法
+ - git clone
+   - URL: https://github.com/goro-tozawa/go-to-hoiku.git
+
+
+ - ローカルで動作させる手順
+  - ターミナルでrails s
+  - URL: http://localhost:3000/
+  
+
+ - パッケージ
+  - RUBYGEMS VERSION: 3.0.3
+  - RUBY VERSION: 2.6.5 (2019-10-01 patchlevel 114) [x86_64-darwin18]
+  - INSTALLATION DIRECTORY: /Users/tozawatagairou/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0
+  - USER INSTALLATION DIRECTORY: /Users/tozawatagairou/.gem/ruby/2.6.0
+  - RUBY EXECUTABLE: /Users/tozawatagairou/.rbenv/versions/2.6.5/bin/ruby
+  - GIT EXECUTABLE: /usr/bin/git
+  - EXECUTABLE DIRECTORY: /Users/tozawatagairou/.rbenv/versions/2.6.5/bin
+  - SPEC CACHE DIRECTORY: /Users/tozawatagairou/.gem/specs
+  - SYSTEM CONFIGURATION DIRECTORY: /Users/tozawatagairou/.rbenv/versions/2.6.5/etc
+  - RUBYGEMS PLATFORMS:
+    - ruby
+    - x86_64-darwin-18
+  - GEM PATHS:
+     - /Users/tozawatagairou/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0
+     - /Users/tozawatagairou/.gem/ruby/2.6.0
+  - GEM CONFIGURATION:
+     - :update_sources => true
+     - :verbose => true
+     - :backtrace => false
+     - :bulk_threshold => 1000
+  - REMOTE SOURCES:
+     - https://rubygems.org/
+  - SHELL PATH:
+     - /Users/tozawatagairou/.rbenv/versions/2.6.5/bin
+     - /usr/local/Cellar/rbenv/1.1.2/libexec
+     - /usr/local/opt/mysql@5.6/bin
+     - /Users/tozawatagairou/.rbenv/shims
+     - /usr/local/bin
+     - /usr/bin
+     - /bin
+     - /usr/sbin
+     - /sbin
+
+
+  
