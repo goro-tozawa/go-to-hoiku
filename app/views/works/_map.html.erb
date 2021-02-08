@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simple Map Sample</title>
+<meta charset="utf-8">
+<style>
+
+#map {
+  height: 400px;
+  width: 600px;
+}
+</style>
+</head>
+  
+<body>
+<div id="map"></div>
+<script>
+  var map;
+  var marker;
+  var infoWindow;
+  var center = {
+  lat: 35.62982, 
+  lng: 139.794242
+};
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 35.62982, lng: 139.794242},
+      center: center, 
+      zoom: 15
+    });
+    marker = new google.maps.Marker({ 
+        position: center, 
+      map: map 
+   });
+    infoWindow = new google.maps.InfoWindow({ 
+        content: '<div class="sample">戸澤仲良し保育園</div>' 
+ marker.addListener('click', function() { 
+     infoWindow.open(map, marker); 
+    });
+  }
+</script> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8yMRMzlCS4Zzo-cp9sW1Z4gP8tc78PnM&callback=initMap" async defer></script>
+</body>
+</html>
