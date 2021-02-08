@@ -3,9 +3,9 @@
 <div class='transaction-contents'>
   <div class='transaction-main'>
     <h1 class='transaction-title-text'>
-      購入内容の確認
+      仕事内容の確認
     </h1>
-    <%# 購入内容の表示 %>
+    
     <div class='buy-item-info'>
       <%= image_tag @work.image, class: 'buy-item-img' %>
       <div class='buy-item-right-content'>
@@ -18,26 +18,15 @@
         </div>
       </div>
     </div>
-    <%# /購入内容の表示 %>
 
-    <%# 支払額の表示 %>
-    <%# <div class='item-payment'>
-      <h1 class='item-payment-title'>
-        支払金額
-      </h1>
-      <p class='item-payment-price'>
-        ¥<%= @item.price %>
-      <%# </p> %>
-    <%# </div> %> 
-    <%# /支払額の表示 %>
-
-    <%= form_with model:@user_purchase,local: true,id: 'charge-form',url: item_orders_path, method: :post, class: 'transaction-form-wrap' do |f| %>
-    <%= render 'shared/error_messages', model: f.object %>
+    <%= form_with model:@user_purchase,local: true,id: 'charge-form',url: work_orders_path, method: :post, class: 'transaction-form-wrap' do |f| %>
+    <%# <%= render 'shared/error_messages', model: f.object %> 
 
     <div class='shipping-address-form'>
       <h1 class='info-input-haedline'>
-        配送先入力
+       住所入力
       </h1>
+      <h3>※突然のキャンセル時や契約に反する行為をされた場合を考え、住所登録のご協力をよろしくお願い致します</h3>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">郵便番号</label>
@@ -83,9 +72,9 @@
     </div>
     <%# /配送先の入力 %>
     <div class='buy-btn'>
-      <%= f.submit "購入" ,class:"buy-red-btn" %>
+      <%= f.submit "応募する" ,class:"buy-red-btn" %>
     </div>
     <% end %>
   </div>
 </div>
-<%= render "shared/second-footer"%>
+<%# <%= render "shared/second-footer"%> 

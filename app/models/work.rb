@@ -1,6 +1,7 @@
 class Work < ApplicationRecord
   belongs_to :childcare_user
   has_one_attached :image
+  has_one :purchase
 
   with_options presence: true do
     validates :work_title
