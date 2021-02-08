@@ -5,7 +5,7 @@
 <title>Simple Map Sample</title>
 <meta charset="utf-8">
 <style>
-
+/* マップを表示する div 要素の高さを必ず明示的に指定します。 */
 #map {
   height: 400px;
   width: 600px;
@@ -14,7 +14,7 @@
 </head>
   
 <body>
-<div id="map"></div>
+<div id="map"></div><!-- 地図を表示する div 要素（id="map"）-->
 <script>
   var map;
   var marker;
@@ -29,12 +29,13 @@
       center: center, 
       zoom: 15
     });
-    marker = new google.maps.Marker({ 
-        position: center, 
-      map: map 
+    marker = new google.maps.Marker({ // マーカーの追加
+        position: center, // マーカーを立てる位置を指定
+      map: map // マーカーを立てる地図を指定
    });
-    infoWindow = new google.maps.InfoWindow({ 
-        content: '<div class="sample">戸澤仲良し保育園</div>' 
+    infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+        content: '<div class="sample">戸澤仲良し保育園</div>' // 吹き出しに表示する内容
+  });
  marker.addListener('click', function() { 
      infoWindow.open(map, marker); 
     });
