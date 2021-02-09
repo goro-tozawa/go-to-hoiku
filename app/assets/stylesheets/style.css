@@ -130,6 +130,13 @@ main{
 
 .contents li{
   position: relative;
+  /* opacity: 0; */
+  transform: translateY(50px);
+  transition: 1s;
+}
+.contents li.show{
+  /* opacity: 1; */
+  transform: none;
 }
 
 .top-contents li{
