@@ -67,6 +67,15 @@ ActiveRecord::Schema.define(version: 2021_02_08_015844) do
     t.index ["purchase_id"], name: "index_domiciles_on_purchase_id"
   end
 
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "purchases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "work_id"
