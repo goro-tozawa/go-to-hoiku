@@ -14,7 +14,7 @@
             <%= image_tag("go-to-hoiku_rogo.png", class: :logo) %>
     </header>
 
-      <div class="top-main">
+   <div class="top-main">
         <p class="breadth">
            <%= image_tag("mainimg.png", class: :top_photo) %>
         </p>   
@@ -29,22 +29,44 @@
         <%= link_to '新規仕事依頼', new_work_path, class: "subtitle" %>
 
    <% @works.each do |work| %>
-      <%# <li class='list'> %>
+      <li class='list'>
       <%= link_to work_path(work.id) do %>
       <div class='item-img-content'>
         <%= image_tag work.image, class: "item-img" if work.image.attached?%>
+          <% if work.purchase.present? %>
+          <div class='sold-out'>
+            <span>募集終了</span>
+          </div> 
+       <% end %>
       </div>
       
       <div class='item-info'>
           <h3 class='item-name'>
-            <%= work.work_title %>
+      <%= work.work_title %>
           </h3>
           <div class='item-price'>
             <span><%= work.facility_name %><br><%= work.recruiting_days %></span>
           </div>
         </div>
-   <% end %>     
+      <% end %>     
+       </li>
    <% end %>
+
+    <% if @works.empty?%>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag("img12.jpg", class: :item_img) %>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            夕方に子どもと一緒に遊びませんか？
+          </h3>
+          <div class='item-price'>
+            <span>戸沢保育園<br>2月10日(水)</span>
+          </div>
+        </div>
+        <% end %>
+      </li>
+    <% end %>
   </div>
 
       
