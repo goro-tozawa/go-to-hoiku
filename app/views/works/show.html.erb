@@ -4,10 +4,11 @@
   <div class="item-box">
     <div class='item-img-content'>
       <%= image_tag @work.image,class:"item-box-img" %>
-      <%# <% if @work.purchase.present? %>
-        <%# <div class='sold-out'> %>
-        <%# <span>Sold Out!!</span> %>
-      <%# </div> %>
+      <% if @work.purchase.present? %>
+       <div class='sold-out'> 
+         <span>募集終了</span> 
+       </div> 
+       <% end %>
     </div> 
 
     <h2 class="name">
@@ -50,7 +51,9 @@
         </tr>
       </tbody>
     </table>
-    
+    <h3 class='item-name'>
+      <%= @work.facility_name %>の位置
+    </h3>
     <%= render "works/map" %>
       
     <% if childcare_user_signed_in? && @work.childcare_user_id %>
