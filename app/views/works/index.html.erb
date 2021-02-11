@@ -32,7 +32,7 @@
       <li class='list'>
       <%= link_to work_path(work.id) do %>
       <div class='item-img-content'>
-        <%= image_tag work.image, class: "item-img" if work.image.attached?%>
+        <%= image_tag work.image, class: "item-img" %>
           <% if work.purchase.present? %>
           <div class='sold-out'>
             <span>募集終了</span>
