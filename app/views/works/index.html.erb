@@ -14,7 +14,7 @@
             <%= image_tag("go-to-hoiku_rogo.png", class: :logo) %>
     </header>
 
-   <div class="top-main">
+  <div class="top-main">
         <p class="breadth">
            <%= image_tag("mainimg.png", class: :top_photo) %>
         </p>   
@@ -27,7 +27,7 @@
    <div class='item-contents'>
         <h2 class='title'>お仕事一覧</h2>
         <%= link_to '新規仕事依頼', new_work_path, class: "subtitle" %>
-
+    <ul class='item-lists'>
    <% @works.each do |work| %>
       <li class='list'>
       <%= link_to work_path(work.id) do %>
@@ -67,6 +67,7 @@
         <% end %>
       </li>
     <% end %>
+    </ul>
   </div>
 
       

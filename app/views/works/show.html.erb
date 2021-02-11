@@ -51,7 +51,9 @@
         </tr>
       </tbody>
     </table>
-    
+    <h3 class='item-name'>
+      <%= @work.facility_name %>の位置
+    </h3>
     <%= render "works/map" %>
       
     <% if childcare_user_signed_in? && @work.childcare_user_id %>

@@ -4,8 +4,9 @@ class Work < ApplicationRecord
   has_one :purchase
 
   with_options presence: true do
-    validates :work_title
-    validates :facility_name
+    validates :image
+    validates :work_title, format: { with: /\A[ぁ-んァ-ン一-龥々]+\z/, message: "Work_title is invalid. Input full-width characters."}
+    validates :facility_name, format: { with: /\A[ぁ-んァ-ン一-龥々]+\z/, message: "Facility_name is invalid. Input full-width characters."}
     validates :job_description
     validates :person
     validates :recruiting_days
