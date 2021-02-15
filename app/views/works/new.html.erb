@@ -1,12 +1,11 @@
-<div class="items-sell-contents">
   <header class="items-sell-header">
     <%= link_to image_tag('go-to-hoiku_rogo.png' , size: '185x50'), "/" %>
-
   </header>
+<%= form_with(model: @work, local: true) do |f| %>
+<div class="items-sell-contents">
   <div class="items-sell-main">
     <h2 class="items-sell-title">仕事内容の情報を入力</h2>
     
-  <%= form_with(model: @work, local: true) do |f| %>
   
     <%# <%= render 'shared/error_messages', model: f.object %> 
     <%# エラーメッセージ %>

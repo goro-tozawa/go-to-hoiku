@@ -14,11 +14,11 @@
             <%= image_tag("go-to-hoiku_rogo.png", class: :logo) %>
     </header>
 
-  <div class="top-main">
+<div class="top-main">
         <p class="breadth">
            <%= image_tag("mainimg.png", class: :top_photo) %>
         </p>   
-    <!-- ul.contents>li.animationTarget*4>img[src="img/img$.jpg"]+.contentsText>h2{Dummy Title}+p{ここに文章が入ります} -->
+
         <div class="top-contentsText">
           <%= link_to image_tag("img11.png", class: :general ),users_path %>
           <%= link_to image_tag("img10.png", class: :enterprise ),childcare_users_path %>
@@ -42,12 +42,12 @@
       
       <div class='item-info'>
           <h3 class='item-name'>
-      <%= work.work_title %>
+        <%= work.work_title %>
           </h3>
           <div class='item-price'>
             <span><%= work.facility_name %><br><%= work.recruiting_days %></span>
           </div>
-        </div>
+      </div>
       <% end %>     
        </li>
    <% end %>
