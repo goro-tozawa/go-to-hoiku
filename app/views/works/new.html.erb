@@ -74,8 +74,8 @@
 
      <%# recruiting_daysのカレンダーを挿入 %>
 
-     <div class="price-content">
-          <div class="price-text">
+     <div class="form-group">
+          <div class="form-text">
             <span>募集日時</span>
             <span class="indispensable">必須</span>
           </div>
@@ -83,8 +83,8 @@
           <%= f.text_field :recruiting_days, class:"price-input", id:"recruiting-days", placeholder:"例）2020/04/04" %>
         </div>
 
-     <div class="price-content">
-          <div class="price-text">
+     <div class="form-group">
+          <div class="form-text">
             <span>仕事時間</span>
             <span class="indispensable">必須</span>
           </div>
@@ -93,8 +93,8 @@
           <span class="sell-yen">時間</span>
         </div>
 
-     <div class="price-content">
-          <div class="price-text">
+     <div class="form-group">
+          <div class="form-text">
             <span>時給</span>
             <span class="indispensable">必須</span>
           </div>
@@ -112,7 +112,6 @@
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
-  </div>
   <% end %>
 
   <footer class="items-sell-footer">
@@ -126,4 +125,5 @@
       ©︎Go-to-hoiku,Inc.
     </p>
   </footer>
+  </div>
 </div>
