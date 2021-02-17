@@ -28,15 +28,18 @@
 # :globe_with_meridians: App.URL
   ## https://go-to-hoiku.herokuapp.com/  
 
-# 3.テスト用アカウント
-   - 一般ユーザー 
-  アカウント名: test01
-  password: test01
+# :page_facing_up: テスト用アカウント
+## - 一般ユーザー  
+   ### - アカウント名: test01
+   ### - パスワード:  test01 
+   
+   
+## - 施設ユーザー  
+   ### - アカウント名: test02  
+   ### - password: test02
 
 
-   - 施設ユーザー 
-  アカウント名: test02
-  password: test02
+ 
 
 # 4.利用方法
   - 一般ユーザー
