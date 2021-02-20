@@ -44,7 +44,7 @@
 # 4.利用方法
 ## 一般ユーザー
    - 一般ユーザーのトップページに遷移し、新規登録を行う
-   - ![01bcba4405fb93dae860e26cd5a1e10a](https://user-images.githubusercontent.com/75603420/108199670-b7d63500-7160-11eb-8120-a429e4a115f3.gif)
+   ![01bcba4405fb93dae860e26cd5a1e10a](https://user-images.githubusercontent.com/75603420/108199670-b7d63500-7160-11eb-8120-a429e4a115f3.gif)
 
    - トップページのリンクから仕事先を選択する。 
    - ![23fb2398837c05ed52664a2cdd503154](https://user-images.githubusercontent.com/75603420/108200888-6d55b800-7162-11eb-82be-58c327fbb802.gif)
