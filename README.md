@@ -41,7 +41,7 @@
 
  
 
-# 4.利用方法
+# :computer: 利用方法
 ## 一般ユーザー
    - 一般ユーザーのトップページに遷移し、新規登録を行う
    ![01bcba4405fb93dae860e26cd5a1e10a](https://user-images.githubusercontent.com/75603420/108199670-b7d63500-7160-11eb-8120-a429e4a115f3.gif)
@@ -49,14 +49,18 @@
    - トップページのリンクから仕事先を選択する。 
    ![23fb2398837c05ed52664a2cdd503154](https://user-images.githubusercontent.com/75603420/108200888-6d55b800-7162-11eb-82be-58c327fbb802.gif)
 
-   - 仕事を選択したら施設からの連絡を待ち、日程や仕事内容を確認する。
-
-  - 施設ユーザー
+## 施設ユーザー
    - 施設ユーザーのトップページに遷移し、新規登録を行う 
-   - トップページから「仕事を依頼する」ボタンを押し、自分に合った施設を探す。 
-   - 仕事を依頼したら一般ユーザーからの登録を待ち、日時、連絡を取り合い、日程や仕事内容を確認する。
+   ![b62dfe007af2d5ac1a05705c81786cf1](https://user-images.githubusercontent.com/75603420/108612818-5e575a00-742f-11eb-98a2-1a1c75058deb.gif)
+   
 
-# 5.目指した目標
+   - 「新規仕事」、「仕事を依頼する」のボタンを押し、仕事の依頼内容を作成
+   ![dace628845f3e5d0875ee13fb23c57b4](https://user-images.githubusercontent.com/75603420/108612867-bb531000-742f-11eb-86cd-81fb20bf0be0.gif)
+   ![6b94b9aac40f5b24af48028f59320a66](https://user-images.githubusercontent.com/75603420/108612915-12f17b80-7430-11eb-8e8d-2a158d1b4814.gif)
+
+   - 仕事を依頼したらトップページに表示される
+
+# :octocat: 目指した目標
   -  ユーザーを引き寄せるアニメーション
   ![9087d021ef070f892c10ec401cbb779b](https://user-images.githubusercontent.com/75603420/108612513-cb1d2500-742c-11eb-84fe-fb444b0cd69f.gif)
 
@@ -65,39 +69,20 @@
   > 「農how」 URL:https://agritrio.co.jp/nouhow.html
 
 
-  -  潜伏保育士（保育士の資格は持っているが、労働環境や人間関係の悩みなどの理由で働いていない保育士）のハードルを下げ、自分の好きな時間に働き、子どもと関われる環境づくりをプログラミングという観点から解決することが目標。
+  -  deviseでカラム内容の違うユーザーを２つ、作成する。
 
-# 6.洗い出した要件
+# :bathtub: 洗い出した要件
   - 一般ユーザーと施設ユーザーの2つのユーザー管理機能を実装
   - 一般ユーザーが仕事を探し、選択することのできるページ
-  - 施設ユーザーがことができるページ
+  - 施設ユーザーは仕事を依頼することができる
 
-# 7. 実装した機能についてのGIFと説明
-  - 一般ユーザーと施設側ユーザー、それぞれのページに遷移する
+# :clipboard: 実装予定の機能
 
-
-   - URL: https://gyazo.com/0e69b89acba27b7339f14f7521b164bd
-   - URL: https://gyazo.com/dd692e7687aad2ef085b1654f5a05451
-
-
-  - 一般ユーザーと施設側ユーザー、それぞれの新規登録画面。（カラムが違うため、deviseで2つのモデルを作成）
-
-   - URL: https://gyazo.com/7e85e521de05f597b48ff580024727c5
-   - URL: https://gyazo.com/614c4194fc90a55d7f356fe334bf7bd7
-  
-  - radio_btn実装
-
-   - URL: https://gyazo.com/b88af878b1ce19ea3d4bba47cc35886a 
-  
-  - viewの見やすさ
-   - https://gyazo.com/3d5a8eaa94ee100de879d45c1bd01083
-
-# 8. 実装予定の機能
-
-  - API GoogleMap(詳細ページで施設の位置を伝えるため)
+  - index.htmlをRubyに変換し、アニメーションを
+  反映
   - カレンダー（働ける日程をカレンダーから選択するため）
 
-# 9. データベース設計
+# :wrench: データベース設計
 
 ## users テーブル
 
@@ -177,7 +162,7 @@
 - belongs_to :purchase
 
 
-#### 10. ローカルでの動作作法
+#  :iphone: ローカルでの動作作法
  - git clone
    - URL: https://github.com/goro-tozawa/go-to-hoiku.git
 
