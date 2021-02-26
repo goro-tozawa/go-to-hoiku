@@ -7,11 +7,9 @@
     <h2 class="items-sell-title">仕事内容の情報を入力</h2>
     
   
-    <%# <%= render 'shared/error_messages', model: f.object %> 
-    <%# エラーメッセージ %>
+    <%= render 'shared/error_messages', model: f.object %>
     
-
-    <%# 出品画像 %>
+    
     <div class="img-upload">
       <div class="weight-bold-text">
         職場画像
@@ -49,7 +47,7 @@
         <span class="indispensable">必須</span>
         <%= f.text_area :job_description, class:"items-text", id:"job-description", placeholder:"仕事の説明（必須 1,000文字まで）例）子どもと一緒に食事をし、掃除をする簡単なお仕事です" ,rows:"7" ,maxlength:"1000" %>
       </div>
-    </div>
+  </div>
 
   
      <div class="form-group">
