@@ -2,7 +2,7 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%= image_tag("go-to-hoiku_rogo.png", class: :logo) %>
+            <%= link_to image_tag("go-to-hoiku_rogo.png", class: :logo), "/" %>
           </div>
           <%# ログインしているときは以下を表示するようにしましょう %>
           <% if user_signed_in?  %>
