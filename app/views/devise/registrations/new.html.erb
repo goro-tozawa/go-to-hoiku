@@ -1,5 +1,5 @@
 <%= form_with model: @user, url:user_registration_path, class: 'registration-main', local: true do |f| %>
-<%# //「モデル名」にはUserモデルであれば@userを渡しましょう。「新規登録機能へのパス」は、devise導入後にrails routesを実行してdevise/registrations#createへのパスを確認し、記載してください。 %>
+
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
@@ -7,9 +7,8 @@
     </h1>
   </div>
 
-  <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-  <%# <%= render 'shared/error_messages', model: f.object %> 
-  <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+  <%= render 'shared/error_messages', model: f.object %>
+
   <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">お名前(全角)</label>
@@ -35,19 +34,20 @@
         <label class="form-text">生年月日</label>
         <span class="indispensable">必須</span>
       </div>
-      <div class='input-birth-wrap'>
-        <%= raw sprintf(
-                    f.date_select(
-                      :birthday,
-                      class:'select-birth',
-                      id:"birth-date",
-                      use_month_numbers: true,
-                      prompt:'--',
-                      start_year: 1930,
-                      end_year: (Time.now.year - 5),
-                      date_separator: '%s'),
-                    "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-    </div>
+     <%# <div class='input-birth-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :birthday,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    <%# </div>  %>
+    <%# errorの原因が不明のため保留 %>
 
          <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
     </div>
@@ -129,33 +129,14 @@
         <%= f.text_area :self_introduction, class:"input-name-self_introduction", id:"self_introduction", placeholder:"例) 正職員で保育士として７年間、働いていました！よろしくお願い致します！" %>
       </div>
    </div>
-
-  <%# <div class="form-group">
-    <p class='form-info-header'>
-      本人確認
-    </p>
-    <p class='form-info-text'>
-      安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
-    </p>
-  </div>< %>
-  
-    <%# p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p> %>
-  <%# </div> %>
-  <%# <div class="form-group">
-    <h2 class='form-bottom-text'>
-      「会員登録」のボタンを押すことにより、
-      <span>利用規約</span>
-      <br>に同意したものとみなします
-    </h2>
-  </div> %>
   
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
-  <%# <p class='register-info'>本人情報の登録について</p> %>
+
 </div>
 
 <% end %>
 
-<%# <%= render "shared/second-footer"%> 
+<%= render "shared/second-footer" %>
 
