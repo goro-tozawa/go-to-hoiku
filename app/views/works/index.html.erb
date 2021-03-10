@@ -13,7 +13,7 @@
 
 <script>
 $(function(){
-   $('a[href^=#]').click(function() {
+   $('link_to[anchor]').click(function() {
       var speed = 400; 
       var href= $(this).attr("href");
       var target = $(href == "#" || href == "" ? 'html' : href);
@@ -86,20 +86,30 @@ $(function(){
 
        <div class='user-page'>
        <h2 id="user-login">一般ユーザーの方</h2>
-       <ul class='lists-right'> 
-    <% if user_signed_in? %>
-        
-       <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
-       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+          <ul class='lists-right'> 
+                <% if user_signed_in? %>
+                  <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
+                  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
 
-     <% else %>
+                <% else %>
 
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-    <% end %>
+                  <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+                  <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+                <% end %>
     
-    </ul>
+          </ul>
        </div>
+       <div class='childcare-user-page'>
+       <h2 id="childcare-user-login">施設ユーザーの方</h2>
+                 <% if childcare_user_signed_in?  %>
+                   <li><%= link_to "ログアウト", destroy_childcare_user_session_path, method: :delete,  class: :nav__btn %></li>
+
+                 <% else %> 
+
+                  <li><%= link_to "ログイン", new_childcare_user_session_path, class: "login" %></li>
+                  <li><%= link_to "新規登録", new_childcare_user_registration_path, class: "sign-up"%></li>
+       </div>
+                <% end %>
   </div>
 
       
