@@ -2,7 +2,6 @@
 <header class='top-page-header'>
 
     <ul class='lists-right'> 
-      <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
     <% if user_signed_in? %>
         
        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
